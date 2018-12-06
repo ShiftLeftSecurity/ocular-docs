@@ -61,8 +61,16 @@ java2cpg application.jar -nu
 
 More fine grained control over the classes to exclude from analysis is supported via the "-b" flag, which accepts a comma-separated list of path names to exclude. 
 
-For example, the following command will explicitly blacklist  any classes defined in packages beneath "org/foo" and "org/bar".
+For example, the following command will explicitly blacklist any classes defined in packages beneath "org/foo" and "org/bar".
 
 ```bash
 java2cpg application.jar -b org/foo,org/bar
+```
+
+Alternatively, whitelisting can be performed on packages. For example,
+code property graph construction can be limited to classes in the
+package "org.project" as follows.
+
+```bash
+java2cpg -mb -w org/project
 ```
