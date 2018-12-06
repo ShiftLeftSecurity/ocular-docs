@@ -72,5 +72,5 @@ code property graph construction can be limited to classes in the
 package "org.project" as follows.
 
 ```bash
-java2cpg -mb -w org/project
+java2cpg -nb -w org/project
 ```
