@@ -1,6 +1,6 @@
-# ShiftLeft Code Analysis Tools
+# Ocular Manual
 
-The ShiftLeft Code Analysis Tools expose the complete capabilities of ShiftLeft's static analysis to security consultants and developers. These tools give users the ability to generate and query code property graphs and security profiles, and are designed with extensibility and interoperability in mind.
+Ocular exposes the complete capabilities of ShiftLeft's static analysis to security consultants and developers. Ocular consists of a set of command line tools. These tools give users the ability to generate and query code property graphs and security profiles, and are designed with extensibility and interoperability in mind.
 
 The command line tools currently operate on Java archives (JAR/WAR format). These archives are passed to the `java2cpg` tool, which generates an intermediate graph representation of code from the JAR, a code property graph (CPG). This graph can be queried using an interactive shell, the REPL, or analyzed automatically to generate a *security profile* with the `cpg2sp` tool, according to security policy. The security profile summarizes security-relevant properties of the application, including identified vulnerabilities and data leaks.
 
@@ -16,8 +16,6 @@ The command line tools currently operate on Java archives (JAR/WAR format). Thes
 
 * **Automatic code scanning.** Policies can be applied to code property graphs to generate *security profiles*. These profiles provide a summary of an application's security-relevant flows, derived with respect to the policy. Like code property graphs, security profiles can be explored and processed via the REPL, and they additionally serve as summaries of vulnerabilities  and data leaks present in the code.
 
-@@@ index
-
 * [Installation](installation.md)
 * [Getting Started](getting-started.md)
 * [Java Vulnerable Lab](java-vuln.md)
@@ -29,4 +27,3 @@ The command line tools currently operate on Java archives (JAR/WAR format). Thes
 * [Analyzing libraries](libanalysis.md)
 * [Exploring the call graph](callgraph.md)
 
-@@@
