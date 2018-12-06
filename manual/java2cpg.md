@@ -41,11 +41,23 @@ CPGs can also be generated in standard formats to enable importing into external
 java2cpg application.jar -n foo.xml -o graphml
 ```
 
-By default, java2cpg will unpack jars recursively, that is, if the
-application jar bundles dependencies as jars, those will be unpacked
-and their corresponding graphs will be included in the output. It is
-possible to disable this recursive unpacking via the `-nu` flag. For
-example, consider an application.jar with the following content:
+# Blacklisting and whitelisting of packages
+
+There is no way for `java2cpg` can know which of the classes in a jar you are interested in analyzing, in which ones are just dependencies. By default, `java2cpg` will therefore **recursively unpack** all jars in jars and include all class files in the code property graph. This is often not what you want and leads to out of memory errors. To tackle this problem, you can either specify a whitelist of packages to include or blacklist packages to ensure that they are not included. As an example, consider you would like to only include code in the package `com.customer`. You can do this by running java2cpg as follows:
+
+```bash
+java2cpg.sh -nb -w 'com/customer' <customer.jar>
+```
+
+Alternatively, you can specify a comma-separated list of packages, which should not be included, for example
+
+```bash
+java2cpg.sh -b 'org/springframework,org/apache' <customer.jar>
+```
+will exclude all code in the packages org,springframework and
+org.apache. Finally, it is possible to disable recursive unpacking via
+the `-nu` flag. For example, consider an application.jar with the
+following content:
 
 ```
 com/custommer/myClass.class
@@ -53,24 +65,9 @@ dependency.jar
     org/foo/Library.class
 ```
 
-The "dependency.jar" and its archived "Library.class" file can be excluded from the analysis as follows:
+The "dependency.jar" and its archived "Library.class" file can be
+excluded from the analysis as follows:
 
 ```bash
 java2cpg application.jar -nu
-```
-
-More fine grained control over the classes to exclude from analysis is supported via the "-b" flag, which accepts a comma-separated list of path names to exclude. 
-
-For example, the following command will explicitly blacklist any classes defined in packages beneath "org/foo" and "org/bar".
-
-```bash
-java2cpg application.jar -b org/foo,org/bar
-```
-
-Alternatively, whitelisting can be performed on packages. For example,
-code property graph construction can be limited to classes in the
-package "org.project" as follows.
-
-```bash
-java2cpg -nb -w org/project
 ```
