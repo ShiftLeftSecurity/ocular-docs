@@ -1,6 +1,7 @@
-# Java2CPG
+# Java2CPG: Generating Code Property Graphs from Java Archives
 
-Java2CPG is a ShiftLeft Command Line Tool used tool to convert Java archives to Code Property Graphs (CPG).
+Java2CPG is a command line tool used tool to convert Java archives
+(JAR/WAR files) to Code Property Graphs (CPG).
 
 # Usage
 
@@ -10,11 +11,19 @@ java2cpg [-o <outputformat>] [-n <outputlocation>] <jar>
 
 # Description
 
-Java2CPG converts Java Archives (JAR files) and Java Web Archives (WAR files) into Code Property Graphs, an intermediate graph representation of code. Multiple different output formats are supported, including standard formats such as graphml and gyro, as well as a the  space-efficient binary format Protobuf.
+Java2CPG converts Java Archives (JAR files) and Java Web Archives (WAR
+files) into Code Property Graphs, an intermediate graph representation
+of code. Multiple different output formats are supported, including
+standard formats such as graphml and gyro, as well as a the
+space-efficient binary format Protobuf. Java2CPG recursively unpacks
+jars to obtain all class files directly and indirectly stored in the
+archive. A package blacklist or whitelist can subsequently be applied
+for package selection.
 
 # Examples
 
-A code property graph named "cpg.bin.zip" suitable to be processed with other ShiftLeft Command Line Tools can be generated as follows:
+A code property graph named "cpg.bin.zip" suitable to be processed
+with other ShiftLeft Command Line Tools can be generated as follows:
 
 ```bash
 java2cpg application.jar
@@ -32,7 +41,11 @@ CPGs can also be generated in standard formats to enable importing into external
 java2cpg application.jar -n foo.xml -o graphml
 ```
 
-By default, java2cpg will unpack jars recursively, that is, if the application jar bundles dependencies as jars, those will be unpacked and their corresponding graphs will be included in the output. It is possible to disable this recursive unpacking via the `-nu` flag. For example, consider an application.jar with the following content:
+By default, java2cpg will unpack jars recursively, that is, if the
+application jar bundles dependencies as jars, those will be unpacked
+and their corresponding graphs will be included in the output. It is
+possible to disable this recursive unpacking via the `-nu` flag. For
+example, consider an application.jar with the following content:
 
 ```
 com/custommer/myClass.class
