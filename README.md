@@ -7,6 +7,7 @@ Documentation
 -------------
 
 [Tutorials](tutorials/index.d)
+
 [Manual](manual/index.md)
 
 Blog posts
