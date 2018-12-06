@@ -20,7 +20,7 @@ jars to obtain all class files directly and indirectly stored in the
 archive. A package blacklist or whitelist can subsequently be applied
 for package selection.
 
-# Examples
+# Usage
 
 A code property graph named "cpg.bin.zip" suitable to be processed
 with other ShiftLeft Command Line Tools can be generated as follows:
