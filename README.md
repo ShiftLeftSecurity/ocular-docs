@@ -1,4 +1,4 @@
 Ocular Documentation
 ====================
 
-[Manual](manual)
+[Manual](manual/index.md)
