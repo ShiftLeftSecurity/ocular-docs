@@ -1,17 +1,17 @@
 # Constructing beautiful CPGs from Java Archives
 
 In this tutorial, we show how to create code property graphs (CPGs) from 
-Java archives (JAR or WAR files). To be more precise, we want to use Ocular toolset 
-to create efficient CPGs to improve your results and speed up the analysis, 
-no matter if you use the trial or the full version of Ocular. 
+Java archives (JAR or WAR files). To be more precise, we want to use the Ocular
+toolset to create efficient CPGs to improve your results and speed up 
+the analysis, no matter if you use the trial or the full version of Ocular. 
 
 Ocular is shipped with our java frontend tool named `java2cpg`. While java2cpg, 
-with default settings, is doing a great job, at creating CPGs out of java projects, 
+with default settings is doing a great job at creating CPGs from java projects, 
 it is still easily customizable to adjust it to your needs. 
 
 We want to show you the impact of parameterizing java2cpg, by making 
 our hands dirty on a sample war, the jenkins project war. The shell-commands 
-below just download the war project from the jenkins site, which has a size 
+below are downloading the war project from the jenkins site, which has a size 
 of around 73M at the time of writing this tutorial. 
 
 ```
