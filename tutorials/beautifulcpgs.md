@@ -1,4 +1,4 @@
-Constructing beautiful CPGs from Java Archives
+# Constructing beautiful CPGs from Java Archives
 
 In this tutorial, we learn how code property graphs (CPGs) can be
 created from Java archives (JAR or WAR files) using the Ocular full or
