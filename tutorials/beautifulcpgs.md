@@ -57,4 +57,4 @@ Among the packages `jenkins`, `lib.jenkins`, `org.jenkins`, and `org.jenkinsci`,
 ```
 time ./java2cpg.sh subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins
 ```
-The resulting CPG is 9.5 MB in size, as opposed to the CPG generated using the default blacklist, which is 14MB in size. Subsequent analysis of this CPG will now focus on the Jenkins code and skip libraries such as `hudson`, and `gnu.crypt`, which were included originally only due to lack of blacklisting.
+The resulting CPG is 9.5 MB in size, as opposed to the CPG generated using the default blacklist, which is 70MB in size. Subsequent analysis of this CPG will now focus on the Jenkins code and skip libraries such as `hudson`, and `gnu.crypt`, which were included originally only due to lack of blacklisting.
