@@ -66,3 +66,6 @@ CPGs may contain to little code, or too much. There is no way for the tool
 to know which classes you are interested in, however, the tool does offer
 capabilities for the user to quickly select Java packages of
 interest. We demonstrate these capabilities in this tutorial.
+
+
+It is important to note that blacklisting a package is *not* removing the calls to this package. Blacklisting just avoids an analysis of the package and thus add the content of the package to the CPG. Meaning, if we blacklist hudson we still see the calls to this dependency but not what is inside of these calls. 
