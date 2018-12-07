@@ -55,5 +55,6 @@ grep 'Included' packages.txt| less
 Among the packages `jenkins`, `lib.jenkins`, `org.jenkins`, and `org.jenkinsci`, libraries such as `hudson`, `gnu.crypt` and `winstone` were apparently not on the blacklist and would therefore be included in the CPG. This is not desirable, as we are interested in finding vulnerabilities in Jenkins, and not in one of its dependencies. In this particular case, a good choice is therefore to simply use a whitelist:
 
 ```
-time ./java2cpg.sh subjects/jenkins.war -nb -w jenkins,org/jenkins,org/jenkinsci,lib/jenkins
+time ./java2cpg.sh subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins
 ```
+The resulting CPG is 9.5 MB in size, as opposed to the CPG generated using the default blacklist, which is 14MB in size. Subsequent analysis of this CPG will now focus on the Jenkins code and skip libraries such as `hudson`, and `gnu.crypt`, which were included originally only due to lack of blacklisting.
