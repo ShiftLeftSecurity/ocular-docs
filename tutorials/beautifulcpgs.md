@@ -9,7 +9,7 @@ Ocular is shipped with our java frontend tool named `java2cpg`. While java2cpg,
 with default settings is doing a great job at creating CPGs from java projects, 
 it is still easily customizable to adjust it to your needs. 
 
-We want to show you the impact of parameterizing java2cpg, by making 
+We want to show you the impact of parameterizing java2cpg, by getting 
 our hands dirty on a sample war, the jenkins project war. The shell-commands 
 below are downloading the war project from the jenkins site, which has a size 
 of around 73M at the time of writing this tutorial. 
@@ -53,12 +53,13 @@ See for yourself that no relevant packages have been excluded, as the default bl
 grep 'Included' packages.txt| less
 ```
 
-Among the packages `jenkins`, `lib.jenkins`, `org.jenkins`, and `org.jenkinsci`, libraries such as `hudson`, `gnu.crypt` and `winstone` were apparently not on the blacklist and would therefore be included in the CPG. This is not desirable, as we are interested in finding vulnerabilities in Jenkins, and not in one of its dependencies. In this particular case, a good choice is therefore to simply use a whitelist:
+Among the packages `jenkins`, `lib.jenkins`, `org.jenkins`, and `org.jenkinsci`, libraries such as `gnu.crypt` and `winstone` were apparently not on the blacklist and would therefore be included in the CPG. This is not desirable, as we are interested in finding vulnerabilities in Jenkins, and not in one of its dependencies. In this particular case, a good choice is therefore to simply use a whitelist that includes jenkins and hudson packages (hudson is Jenkin's predecessor).
 
 ```
-time ./java2cpg.sh subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins
+time ./java2cpg.sh subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins,hudson
 ```
-The resulting CPG is 9.5 MB in size, as opposed to the CPG generated using the default blacklist, which is 70MB in size. Subsequent analysis of this CPG will now focus on the Jenkins code and skip libraries such as `hudson`, and `gnu.crypt`, which were included originally only due to lack of blacklisting.
+
+The resulting CPG is 44 MB in size, as opposed to the CPG generated using the default blacklist, which is 70MB in size. Subsequent analysis of this CPG will now focus on the Jenkins code and skip libraries such as `hudson`, and `gnu.crypt`, which were included originally only due to lack of blacklisting.
 
 
 However, without telling it which classes one is interested in, the resulting 
