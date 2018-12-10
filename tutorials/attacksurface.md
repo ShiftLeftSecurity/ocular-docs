@@ -61,18 +61,26 @@ name.
 
 Methods that receive StaplerRequests and have no callers.
 
-cpg.parameter.evalType(".*StaplerRequest.*").method.filterNot(_.caller).name.l
+```
+	cpg.parameter.evalType(".*StaplerRequest.*").method.filterNot(_.caller).name.l
+```
 
 Methods that retrieve parameters from Stapler requests.
 
-cpg.method.fullName(".*Stapler.*getParameter.*").caller.fullName.l
+```
+	cpg.method.fullName(".*Stapler.*getParameter.*").caller.fullName.l
+```
 
 Calls to get parameter
 
-cpg.method.fullName(".*Stapler.*getParameter.*").callIn.code.l
+```
+	cpg.method.fullName(".*Stapler.*getParameter.*").callIn.code.l
+```
 
 // Call chains to "set" calls on stapler response
 
-cpg.method.fullName("org.kohsuke.stapler.StaplerResponse.*set.*").calledBy(cpg.method).newCallChain.l.map(x => x.methods.map(_.fullName))
+```
+	cpg.method.fullName("org.kohsuke.stapler.StaplerResponse.*set.*").calledBy(cpg.method).newCallChain.l.map(x => x.methods.map(_.fullName))
+```
 
 Let's use this to draw a map.
