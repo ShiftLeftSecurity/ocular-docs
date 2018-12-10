@@ -83,4 +83,15 @@ Calls to get parameter
 	cpg.method.fullName("org.kohsuke.stapler.StaplerResponse.*set.*").calledBy(cpg.method).newCallChain.l.map(x => x.methods.map(_.fullName))
 ```
 
+Most called methods
+
+```
+	cpg.method.map(x => (x.start.callIn.l.size, x.fullName)).l.sorted
+```
+
+All methods that perform permission checks
+```
+	cpg.method.fullName(".*AccessControlled.checkPermission.*").caller.fullName.l
+```
+
 Let's use this to draw a map.
