@@ -26,7 +26,7 @@ operator to pipe output into files. The script can be run as follows.
 	./ocular.sh --script script.sc --params jarFile=/fullpath/to/file.jar,outFile=out.cpg`
 ```
 
-## Writing 
+## Writing JSON and pretty-printed JSON
 
 ```
 cpg.method.toJson |> "/tmp/foo" 
@@ -36,7 +36,7 @@ cpg.method.toJson |> "/tmp/foo"
 cpg.method.toPrettyJson |> "/tmp/foo"
 ```
 
-## Appending
+## Appending to files
 
 ```
 cpg.method.toJson ||> "/tmp/foo" 
