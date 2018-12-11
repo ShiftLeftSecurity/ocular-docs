@@ -12,7 +12,8 @@ The philosophy behind our tooling is that, while creating a "one-fits-all" vulne
 
 # Prerequisites
 
-Install the ShiftLeft Command Line Tools into local directory `$shiftleft` as described in the [installation documentation](installation.html).
+Install Ocular into local directory `$shiftleft` as described in the
+[installation documentation](installation.html).
 
 # Running example
 
