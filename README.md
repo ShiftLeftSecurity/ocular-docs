@@ -48,6 +48,9 @@ Ocular provides the following core features.
   they additionally serve as summaries of vulnerabilities  and data
   leaks present in the code.
 
+This is Ocular's official documentation. Please feel free to suggest
+fixes or provide new tutorials by sending in a pull request.
+
 Tutorials
 ---------
 
