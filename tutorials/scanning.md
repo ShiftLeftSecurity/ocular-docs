@@ -13,4 +13,6 @@ val sinkMethods = cpg.method.or(
       _.fullName(".*readObjectNodData|readResolve|readExternal.*"),
       _.fullName(".*ObjectInputStream.*readUnshared.*"))
 
+sinkMethods.calledBy(cpg.method).newCallChain.p
+
 ```
