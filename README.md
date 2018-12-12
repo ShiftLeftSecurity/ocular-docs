@@ -48,16 +48,27 @@ Ocular provides the following core features.
   they additionally serve as summaries of vulnerabilities  and data
   leaks present in the code.
 
-Documentation
--------------
+Tutorials
+---------
 
-[Tutorials](tutorials/index.d)
+* [Installation](tutorials/installation.md)
+* [Getting Started with the CPG](tutorials/getting-started-cpg.md)
+* [Getting Started with the SP](tutorials/getting-started-sp.md)
+* [Java Vulnerable Lab](tutorials/java-vuln.md)
+* [Analyzing libraries](tutorials/libanalysis.md)
+* [Exploring the call graph](tutorials/callgraph.md)
 
-[Manual](manual/index.md)
+Reference Manual
+-----------------
+
+* [Java2CPG](manual/java2cpg.md)
+* [FuzzyC2CPG](manual/fuzzyc2cpg.md)
+* [CPG2SP](manual/cpg2sp.md)
+* [REPL](manual/repl.md)
+* [Policy Language](manual/policy-language.md)
 
 Blog posts
 ----------
 ...
 
-References
-----------
+
