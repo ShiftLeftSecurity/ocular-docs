@@ -57,6 +57,7 @@ Tutorials
 * [Installation](tutorials/installation.md)
 * [Getting Started with the CPG](tutorials/getting-started-cpg.md)
 * [Beautiful CPGs with Java2CPG](tutorials/beautifulcpgs.md)
+* [Interfacing with Ocular](tutorials/interfacing.md)
 * [Getting Started with the SP](tutorials/getting-started-sp.md)
 * [Java Vulnerable Lab](tutorials/java-vuln.md)
 * [Analyzing libraries](tutorials/libanalysis.md)
