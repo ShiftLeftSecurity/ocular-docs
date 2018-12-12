@@ -1,5 +1,12 @@
 # Exploring program structure with Ocular
 
+Find main:
+
+```
+cpg.typeDecl.name("ServletContextListener").derivedTypeDecl.fullName.l
+res9: List[String] = List("jenkins.util.SystemProperties$Listener", "hudson.WebAppMain")
+```
+
 List all files
 
 ```
@@ -94,4 +101,11 @@ All methods that perform permission checks
 	cpg.method.fullName(".*AccessControlled.checkPermission.*").caller.fullName.l
 ```
 
-Let's use this to draw a map.
+
+For each external namespace, that is, a namespace where at least one type declaration is not part of the CPG, calculate all namespaces that reference that namespace.
+
+```
+val externalNamespaces = cpg.typeDecl.external.namespace.name.dedup.l
+val x = externalNamespaces.map{ namespace => (namespace, cpg.namespace.name(namespace).typeDecl.method.caller.namespace.name.l.sorted.distinct.size) }.sortBy(x => x._2) 
+```
+
