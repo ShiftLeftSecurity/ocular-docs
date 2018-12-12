@@ -17,7 +17,8 @@ The command line tools currently operate on Java archives (JAR/WAR format). Thes
 * **Automatic code scanning.** Policies can be applied to code property graphs to generate *security profiles*. These profiles provide a summary of an application's security-relevant flows, derived with respect to the policy. Like code property graphs, security profiles can be explored and processed via the REPL, and they additionally serve as summaries of vulnerabilities  and data leaks present in the code.
 
 * [Installation](installation.md)
-* [Getting Started](getting-started.md)
+* [Getting Started with the CPG](getting-started-cpg.md)
+* [Getting Started with the SP](getting-started-sp.md)
 * [Java Vulnerable Lab](java-vuln.md)
 * [Policy Language](policy-language.md)
 * [Java2CPG](java2cpg.md)
