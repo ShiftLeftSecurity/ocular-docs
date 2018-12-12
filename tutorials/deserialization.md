@@ -30,3 +30,12 @@ indirectly, you can use the following query:
 ```
 cpg.typeDecl.name("Serializable").derivedTypeDeclTransitive.fullName.l
 ```
+
+In the context of deserialization vulnerabilities, it may also be
+interesting to review the versions of libraries. As an example, to
+determine the version of the "XStream" library, you can issue the
+following query.
+
+```
+cpg.dependency.name(".*xstream.*").version.l
+```
