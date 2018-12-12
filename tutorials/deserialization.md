@@ -16,3 +16,17 @@ val sinkMethods = cpg.method.or(
 sinkMethods.calledBy(cpg.method).newCallChain.p
 
 ```
+
+The OWASP guide also suggests to harden classes that derive from
+`Serializable`. You can use Ocular to identify classes that directly
+inherit from `Serializable` as follows.
+
+```
+cpg.typeDecl.name("Serializable").derivedTypeDecl.fullName.l
+```
+
+For classes that inherit from `Serializable` either directly or
+indirectly, you can use the following query:
+```
+cpg.typeDecl.name("Serializable").derivedTypeDeclTransitive.fullName.l
+```
