@@ -64,7 +64,7 @@ Tutorials
 * [Java Vulnerable Lab](tutorials/java-vuln.md)
 * [Analyzing libraries](tutorials/libanalysis.md)
 * [Exploring the call graph](tutorials/callgraph.md)
-* [Finding real world vulnerabilities](CVE-2018-19859.md)
+* [Finding real world vulnerabilities by Example](tutorials/CVE-2018-19859.md)
 
 Reference Manual
 -----------------
