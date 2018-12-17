@@ -8,7 +8,7 @@ supports Java, C# and C/C++ (based on
 towards developers and security researchers interested in exploring
 code for vulnerabilities.
 
-A trial version with a limited feature set can be downloaded here:
+A trial version (Java-only) with a limited feature set can be downloaded here:
 
 https://go.shiftleft.io/ocular-free-trial
 
