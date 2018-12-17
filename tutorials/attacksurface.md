@@ -84,7 +84,7 @@ Calls to get parameter
 	cpg.method.fullName(".*Stapler.*getParameter.*").callIn.code.l
 ```
 
-// Call chains to "set" calls on stapler response
+Call chains to "set" calls on stapler response
 
 ```
 	cpg.method.fullName("org.kohsuke.stapler.StaplerResponse.*set.*").calledBy(cpg.method).newCallChain.l.map(x => x.methods.map(_.fullName))
