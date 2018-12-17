@@ -74,8 +74,8 @@ Reference Manual
 * [REPL](manual/repl.md)
 * [Policy Language](manual/policy-language.md)
 
-Blog posts
-----------
-...
+Videos
+-------
+* [Ocular Demo by Chetan Conikee](https://www.youtube.com/watch?v=bB2C-FzC1Yw&feature=youtu.be)
 
 
