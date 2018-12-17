@@ -3,9 +3,10 @@ Ocular Documentation
 
 Ocular is a set of command line tools that expose static analysis
 primitives via a flexible query language. The distribution currently
-supports Java, C# and C/C++ (based on Joern), and is aimed towards
-developers and security researchers interested in exploring code for
-vulnerabilities.
+supports Java, C# and C/C++ (based on
+[Joern](https://github.com/octopus-platform/joern)), and is aimed
+towards developers and security researchers interested in exploring
+code for vulnerabilities.
 
 A trial version with a limited feature set can be downloaded here:
 
