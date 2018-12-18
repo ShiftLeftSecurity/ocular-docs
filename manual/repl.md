@@ -33,8 +33,8 @@ Once fired up, Ocular provides the following commands.
 
 The below only work with `List` at this stage. We can extend/change that if needed.
 
-* pipe output to outfile: `cpg.namespace.l |> "out.txt"`
-* append to outfile: `cpg.namespace.l |>> "out.txt"`
+* pipe output to outfile: `cpg.namespace.name.l |> "out.txt"`
+* append to outfile: `cpg.namespace.name.l |>> "out.txt"`
 
 # Ammonite tricks
 
