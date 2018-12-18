@@ -22,9 +22,9 @@ Ocular provides the following core features.
 
 * **Interactive code analysis via a REPL.** CPGs can be interactively explored
   via our Read-Eval-Print-Loop (REPL), i.e., an interactive shell with support
-  for our custom query language. Among other features, the REPL supports
-  exporting security analysis results as plain text or in JSON format, readline
-  support, and tab-completion (included in trial).
+  for our custom query language. Among other features, the REPL offers utilities
+  for exporting security analysis results as plain text or in JSON format,
+  readline support, and tab-completion (included in trial).
 
 * **Custom analysis scripts and extensibility.** User-provided REPL scripts can
   be executed non-interactively to perform automated custom scans for security
