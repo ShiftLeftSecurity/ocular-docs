@@ -1,8 +1,6 @@
 Tutorials
 ---------
 
-This section provides some handy tutorials that highlight 
-
 * [Using Ocular with the CPG](tutorials/getting-started-cpg.md)
 * [Using Ocular with the SP](tutorials/getting-started-sp.md)
 * [Beautiful CPGs with Java2CPG](tutorials/beautifulcpgs.md)

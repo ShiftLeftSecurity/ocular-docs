@@ -1,6 +1,6 @@
-# OCULAR
+# Ocular Query Language (Oh-Kewl!)
 
-The ShiftLeft Command Line Tool, Ocular, is a REPL (Read-Eval-Print-Loop). It lets you perform code analysis on code property graphs and security profiles, both interactively or with non-interactive scripts. This document provides an overview of the Ocular features.
+ShiftLeft Ocular, is a REPL (Read-Eval-Print-Loop). It lets you perform code analysis on code property graphs and security profiles, both interactively or with non-interactive scripts. This document provides an overview of the Ocular features.
 
 The underlying shell is an interactive scala shell which includes useful things like:
 * <TAB> for autocomplete

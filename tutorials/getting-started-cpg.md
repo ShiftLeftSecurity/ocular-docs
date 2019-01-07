@@ -1,4 +1,4 @@
-# Using Ocular with Code Property Graph
+# Using Ocular with Code Property Graph (CPG)
 
 This tutorial teaches the basics of navigating in the code property
 graph. The tutorial demonstrates how the tooling can be used to:
