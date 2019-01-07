@@ -46,28 +46,6 @@ Ocular provides the following core features.
 This is Ocular's official documentation. Please feel free to suggest
 fixes or provide new tutorials by sending in a pull request.
 
-Tutorials
----------
-
-* [Installation](tutorials/installation.md)
-* [Getting Started with the CPG](tutorials/getting-started-cpg.md)
-* [Beautiful CPGs with Java2CPG](tutorials/beautifulcpgs.md)
-* [Interfacing with Ocular](tutorials/interfacing.md)
-* [Auditing for deserialization](tutorials/deserialization.md)
-* [Getting Started with the SP](tutorials/getting-started-sp.md)
-* [Java Vulnerable Lab](tutorials/java-vuln.md)
-* [Analyzing libraries](tutorials/libanalysis.md)
-* [Exploring the call graph](tutorials/callgraph.md)
-* [Finding real world vulnerabilities by example](tutorials/CVE-2018-19859.md)
-
-Reference Manual
------------------
-
-* [Java2CPG](manual/java2cpg.md)
-* [FuzzyC2CPG](manual/fuzzyc2cpg.md)
-* [CPG2SP](manual/cpg2sp.md)
-* [REPL](manual/repl.md)
-* [Policy Language](manual/policy-language.md)
 
 Videos
 -------

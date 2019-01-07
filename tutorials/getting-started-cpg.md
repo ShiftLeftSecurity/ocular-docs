@@ -1,4 +1,4 @@
-# Getting started with the code property graph
+# Using Ocular with Code Property Graph
 
 This tutorial teaches the basics of navigating in the code property
 graph. The tutorial demonstrates how the tooling can be used to:
