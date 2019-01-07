@@ -1,3 +1,17 @@
 # Summary
+
 * [About Ocular](README.md)
-* [Getting Started](getting-started.md)
+* [Quick Start](getting-started.md)
+* [Installation](tutorials/installation.md)
+* [Tutorials](tutorials/README.md)
+    * [Getting Started with the CPG](tutorials/getting-started-cpg.md)
+    * [Getting Started with the SP](tutorials/getting-started-sp.md)
+    * [Beautiful CPGs with Java2CPG](tutorials/beautifulcpgs.md)
+    * [Interfacing with Ocular](tutorials/interfacing.md)
+    * [Auditing for Deserialization](tutorials/deserialization.md)
+    * [Java Vulnerable Lab](tutorials/java-vuln.md)
+    * [Analyzing Libraries](tutorials/libanalysis.md)
+    * [Exploring a Call Graph](tutorials/callgraph.md)
+    * [Discovering a Real World Vulnerability](tutorials/CVE-2018-19859.md)
+
+* [Reference Manual](manual/README.md)

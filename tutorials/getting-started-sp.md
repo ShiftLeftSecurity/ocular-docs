@@ -1,4 +1,4 @@
-# Getting started with Security Profiles
+# using Ocular with Security Profiles (SP)
 
 This tutorial continues to walk you through the core features of
 Ocular. The tutorial demonstrates how the tooling can be used to:
