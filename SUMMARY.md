@@ -21,4 +21,4 @@
     * [Ocular Query Language](manual/repl.md)
     * [Security Policy Language](manual/policy-language.md)
 
-* [Ocular API Documentation](https://ocular.shiftleft.io/api)
+* [Ocular API](https://ocular.shiftleft.io/api/io/shiftleft/queryprimitives/index.html)
