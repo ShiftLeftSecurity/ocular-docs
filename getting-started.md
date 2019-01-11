@@ -50,12 +50,22 @@ The install script will:
 
 ### Additional Configuration for Large Projects
 
-Code analysis can require lots of memory, and unfortunately, the Java virtual machine does not pick up the available amount of memory by itself. While tuning Java memory usage is a discipline in its own right, it is usually sufficient to specify the maximum available amount of heap memory via the Java virtual machine's `-Xmx` flag. The easiest way to achieve this globally is by setting the environment variable `_JAVA_OPTS` as follows:
+Code analysis can require lots of memory, and unfortunately, the Java Virtual Machine (JVM) does not pick up the available amount of memory by itself. While tuning Java memory usage is a discipline in its own right, it is usually sufficient to specify the maximum available amount of heap memory via the Java virtual machine's `-Xmx` flag. The easiest way to achieve this globally is by setting the environment variable `_JAVA_OPTS` as follows:
 
 ```bash
 export _JAVA_OPTS="-Xmx$NG"
 ```
 where `$N` is the amount of memory in gigabytes. You can add this line to your shell startup script, e.g., `~/.bashrc` or `~/.zshrc`.
+
+> Note: The above option will affect all JVM instances that are started henceforth on the machine.
+
+In order to restrict the JVM option to only the parts of Ocular tools that you intend to use, you can provide it individually as well (such as in Step 3) For example to set 12 GB available heap memory to `java2cpg`, `cpg2sp` or `ocular`, we can just provide this option directly:
+
+```bash
+./ocular.sh -J-Xmx12g
+./java2cpg.sh -J-Xmx12g <...>
+./cpg2sp.sh -J-Xmx12g <...>
+```
 
 ## **Step 2:** Prepare the Target Application
 
