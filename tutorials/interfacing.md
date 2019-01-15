@@ -12,9 +12,9 @@ Ocular, it will run those scripts and exit. To try this out, place the
 following into `test.sc`:
 
 ```
-@main def exec(jarFile: String, outFile: String) = {
-  loadCpg(jarFile)
-  cpg.namespace.l |> outFile
+@main def exec(cpgFile: String, outFile: String) = {
+   loadCpg(cpgFile)
+   cpg.namespace.name.l |> outFile
 }
 
 ```
@@ -23,7 +23,7 @@ You can place arbitrary Scala code into `test.sc` and use the `|>`
 operator to pipe output into files. The script can be run as follows.
 
 ```
-	./ocular.sh --script script.sc --params jarFile=/fullpath/to/file.jar,outFile=out.cpg`
+./ocular.sh --script test.sc --params cpgFile=/fullpath/to/cpg.bin.zip,outFile=out.log
 ```
 
 ## Writing JSON and pretty-printed JSON
