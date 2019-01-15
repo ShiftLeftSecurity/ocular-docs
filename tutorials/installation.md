@@ -1,6 +1,6 @@
 # Installation
 
-This section describes how to install Ocular. Once you have installed it, proceed with [Getting started](getting-started.html).
+This section describes how to install Ocular. Once you have installed it, proceed with [Getting started](https://docs.shiftleft.io/ocular/getting-started).
 
 # Prerequisites
 
