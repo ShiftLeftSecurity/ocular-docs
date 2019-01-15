@@ -50,7 +50,7 @@ fixes or provide new tutorials by sending in a pull request.
 Videos
 -------
 
-* [Ocular Demo by Fabian Yamaguchi](https://www.youtube.com/watch?v=bB2C-FzC1Yw)
-* [Ocular Demo by Chetan Conikee](https://www.youtube.com/watch?v=bB2C-FzC1Yw&feature=youtu.be)
+* [Ocular Demo by Fabian Yamaguchi](https://www.youtube.com/watch?v=n_dpgI2RhEU)
+* [Ocular Demo by Chetan Conikee](https://www.youtube.com/watch?v=bB2C-FzC1Yw)
 
 
