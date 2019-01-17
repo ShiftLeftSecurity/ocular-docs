@@ -65,9 +65,9 @@ File f1 = new File(HttpRequest.read());
 FileOutputStream fs1 = FileOutputStream(f1);
 
 File f2 = new File("static.txt");
-FileOutputStream fs2 = FileOutputStream(f2);
+FileInputStream fs2 = FileInputStream(f2);
 
-String res = fs2.readLine();
+String res = fs2.read();
 fs1.write(res);
 ```
 
