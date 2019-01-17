@@ -62,7 +62,7 @@ Example when descriptors are required:
 
 ```
 File f1 = new File(HttpRequest.read());
-FileOutputStream fs1 = FileOutputStream(f);
+FileOutputStream fs1 = FileOutputStream(f1);
 
 File f2 = new File("static.txt");
 FileOutputStream fs2 = FileOutputStream(f2);
