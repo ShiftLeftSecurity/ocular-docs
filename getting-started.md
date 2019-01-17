@@ -245,13 +245,13 @@ sinks.reachableBy(sources).flows.p
 The flows can be examined manually or automatically. For example, we can determine parameters we control as a result of data flows as follows:
 
 ```scala
-sinks.reachableBy(sources).flows.sink.isParameter.l
+sinks.reachableBy(sources).flows.sink.parameter.l
 ```
 
 The query determines sinks reachable by sources and examines the corresponding data flows. The last flow element is extracted of each flow via the `pathElemens.last` directive, and the corresponding parameter is retrieved. The result of the query can be stored in a variable for further processing, which comes in handy when determining a large number of data flows:
 
 ```scala
-val controlled = sinks.reachableBy(sources).flows.sink.isParameter.l
+val controlled = sinks.reachableBy(sources).flows.sink.parameter.l
 ```
 
 We can now retrieve the parameter index ("ast child number" and method full name):
