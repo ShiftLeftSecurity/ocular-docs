@@ -3,9 +3,9 @@
 Generate a CPG for jenkins
 
 ```
-$ cd ~/bin/shiftleft-cmd/subjects
+$ cd ~/bin/ocular/subjects
 $ wget http://mirrors.jenkins.io/war/latest/jenkins.war
-$ time ./java2cpg.sh ~/bin/shiftleft-cmd/subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins
+$ time ./java2cpg.sh ~/bin/ocular/subjects/jenkins.war -nb -w jenkins,org.jenkins,org.jenkinsci,lib.jenkins
 ```
 
 Start ocular and load the CPG
