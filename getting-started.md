@@ -27,11 +27,11 @@ Ocular runs on top of the Java virtual machine. Please make sure you have a Java
 
 ### Instructions
 
-Begin by decompressing the provided ZIP file `shiftleft-cmd-distribution.zip`. This will create the directory `shiftleft-cmd-distribution`.
+Begin by decompressing the provided ZIP file `ocular-distribution.zip`. This will create the directory `ocular-distribution`.
 
 ```bash
-unzip shiftleft-cmd-distribution.zip
-cd shiftleft-cmd-distribution
+unzip ocular-distribution.zip
+cd ocular-distribution
 ```
 
 Run the installer and follow the prompts:
@@ -42,7 +42,7 @@ bash ./install.sh
 
 The install script will:
 
-* ask you where you want to install it to (defaults to `~/bin/shiftleft-cmd`)
+* ask you where you want to install it to (defaults to `~/bin/ocular`)
 * check if there is an existing installation and offer to delete it
 * unpack the ShiftLeft dynamic policy to `~/.shiftleft/policy/dynamic` and offer to delete it, if it already exists
 * unpack the ShiftLeft static policy to `~/.shiftleft/policy/static` and offer to delete it, if it already exists.
