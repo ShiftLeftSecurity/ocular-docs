@@ -75,7 +75,7 @@ see, the object is passed to `processRequest` where the parameter
 `email` is read as a string from it. The variable is concatenated to
 the sql query without prior checks. This leads to an SQL injection. We
 now illustrate how this vulnerability is identified using
-shiftleft-cmd.
+Ocular.
 
 ### Generating Code Property Graphs and Security Profiles
 

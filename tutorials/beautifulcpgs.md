@@ -15,7 +15,7 @@ below are downloading the war project from the jenkins site, which has a size
 of around 73M at the time of writing this tutorial. 
 
 ```
-	cd ~/bin/shiftleft-cmd/subjects
+	cd ~/bin/ocular/subjects
 	wget http://mirrors.jenkins.io/war/latest/jenkins.war
 	cd ..	
 ```
