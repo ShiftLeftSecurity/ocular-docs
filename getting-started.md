@@ -63,11 +63,9 @@ In order to restrict the JVM option to only the parts of Ocular tools that you i
 
 ```bash
 ./ocular.sh -J-Xmx12g
-./java2cpg.sh -J-Xmx12g <...>
-./cpg2sp.sh -J-Xmx12g <...>
 ```
 
-## **Step 2:** Prepare the Target Application
+## **Step 2:** A quick look at the target application
 
 This tutorial is based on the sample application "Hello-ShiftLeft"
 which you can find in the directory `subjects` provided with the
@@ -119,33 +117,19 @@ In this code fragment, a cookie is received via HTTP and eventually
 deserialized to create a Java object, an optimistic practice that can
 often be exploited by attackers for arbitrary code execution.
 
-## **Step 3:** Generate Code Property Graph
-
-Once the tools are installed, we begin by generating a code property
-graph (CPG) for the `hello-shiftleft.jar`:
-
-```bash
-cd $shiftleft
-./java2cpg.sh subjects/hello-shiftleft-0.0.1-SNAPSHOT.jar -o cpg.bin.zip
-```
-
-This command creates a file named `cpg.bin.zip` containing the code
-property graph in a binary format.
-
-## **Step 4:** Uncovering Attack Surface
+## **Step 3:** Uncovering Attack Surface
 
 The code property graph contains information about the processed code
 on different levels of abstraction, from dependencies, to type
 hierarchies, control flow, data flow, and instruction-level
-information. Like the SP, the CPG can be queried interactively via
-Ocular or via non-interactive scripts. We now illustrate interactive
-querying, however, all queries can also be used as-in in interactive
-scripts.
+information. The CPG can be queried interactively via Ocular or via
+non-interactive scripts. We now illustrate interactive querying,
+however, all queries can also be used as-in in interactive scripts.
 
-The CPG is loaded via the `loadCpg` command:
+The CPG is created via the `createCpg` command:
 
 ```scala
-loadCpg("cpg.bin.zip")
+createCpg("subjects/hello-shiftleft-0.0.1-SNAPSHOT.jar")
 ```
 
 This creates an object named `cpg`, which provides access to the code
@@ -257,7 +241,7 @@ val controlled = sinks.reachableBy(sources).flows.sink.parameter.l
 We can now retrieve the parameter index ("ast child number" and method full name):
 
 ```scala
-controlled.map(x => s"Controlling parameter ${x.astChildNum} of ${x.start.method.fullName.l.head}")
+controlled.map(x => s"Controlling parameter ${x.order} of ${x.start.method.fullName.l.head}")
 ```
 
 yielding
