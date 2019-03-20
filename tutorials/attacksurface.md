@@ -1,6 +1,22 @@
 # Exploring program structure with Ocular
 
-Find main:
+
+Download the Jenkins build server Web archive
+
+```
+	cd ~/bin/ocular/subjects
+	wget http://mirrors.jenkins.io/war/latest/jenkins.war
+	cd ..
+```
+
+Start Ocular and create a code property graph for the Jenkins code:
+
+```
+	createCpg("subject/jenkins.war")
+```
+
+
+Find main method:
 
 ```
 cpg.typeDecl.name("ServletContextListener").derivedTypeDecl.fullName.l
@@ -108,4 +124,3 @@ For each external namespace, that is, a namespace where at least one type declar
 val externalNamespaces = cpg.typeDecl.external.namespace.name.dedup.l
 val x = externalNamespaces.map{ namespace => (namespace, cpg.namespace.name(namespace).typeDecl.method.caller.namespace.name.l.sorted.distinct.size) }.sortBy(x => x._2) 
 ```
-
