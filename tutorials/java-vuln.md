@@ -198,20 +198,6 @@ domain specific language. Ocular can be started as follows:
 
 ```
  ./ocular.sh
-
- Welcome to the cpg console :)
- Commands:
- helpMsg                         // prints this help dialog
- status                          // prints the current status
- loadCpg("path/to/file.[xml|gryo|bin.zip]") // loads cpg (format inferred from suffix)
- loadSp("path/to/file.[sp]")                // loads sp
- ...
-
- Ocular status:
- No CPG currently loaded.
- CPG can be loaded via a `loadCpg` command. See `help`.
- Welcome to the Ocular - what would you like to query today? ;)
- ocular>
 ```
  
 As demonstrated in the non-interactive script report.sc, we can load
@@ -282,10 +268,10 @@ information. Like the SP, the CPG can be queried interactively via Ocular or via
 querying, however, all queries can also be used as-in in interactive
 scripts. 
 
-The CPG is loaded via the `loadCpg` command:
+The CPG is loaded via the `loadCpgRaw` command:
 
 ```
-loadCpg("cpg.bin.zip")
+loadCpgRaw("cpg.bin.zip")
 ```
 
 This creates an object named cpg, which provides access to the code

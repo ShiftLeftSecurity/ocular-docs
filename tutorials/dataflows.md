@@ -12,5 +12,5 @@ Start ocular and load the CPG
 
 ```
 $ ./ocular.sh
-ocular > loadCpg("cpg.bin.zip")
+ocular > loadCpgRaw("cpg.bin.zip")
 ```

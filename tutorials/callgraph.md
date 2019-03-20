@@ -5,18 +5,12 @@ using scripts and the REPL. We illustrate this ability with
 `commons-io` as our test subject. You can download commons-io here:
 ([mvnrepository](http://central.maven.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar))
 
-We then generate a CPG as follows:
 
-```
-./java2cpg.sh -f protobufzip -o commons-io-2.5.bin.zip commons-io-2.5.jar -nb
-
-```
-
-We start the REPL and load the graph:
+We start Ocular and create a CPG for commons-io as follows:
 
 ```
 $ ./ocular.sh 
-ocular> loadCpg("commons-io-2.5.bin.zip") 
+ocular> createCpg("commons-io-2.5.bin.zip") 
 ```
 
 We search for interesting methods in commons-io 2.5 and soon find `java.lang.Runtime.exec` 

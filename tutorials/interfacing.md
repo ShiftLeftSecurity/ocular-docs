@@ -13,7 +13,7 @@ following into `test.sc`:
 
 ```
 @main def exec(cpgFile: String, outFile: String) = {
-   loadCpg(cpgFile)
+   loadCpgRaw(cpgFile)
    cpg.namespace.name.l |> outFile
 }
 
