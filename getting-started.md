@@ -1,19 +1,17 @@
 ## Introduction
 
-This tutorial teaches the basics of navigating in the **Code Property
-Graph (CPG)**. Ocular can also be used to navigate Security Profile (SP)
-which is generated on top of CPG. The tutorial focuses on analysis using
-CPG and demonstrates how the tooling can be used to:
+This tutorial illustrates the basics of navigating in the **Code Property
+Graph (CPG)**. The tutorial demonstrates how the tooling can be used to:
 
-* Interactively query the code property graph to uncover attack surface
-* Formulate ad-hoc queries to identify vulnerabilities
+* ... interactively query the graph to uncover attack surface
+* ... formulate ad-hoc queries to identify vulnerabilities
 
-The philosophy behind our tooling is that, while creating a
+The philosophy behind Ocular is that, while creating a
 "one-fits-all" vulnerability scanner borders on the impossible, you
-can certainly provide the tooling that vulnerability researchers
-require to explore code bases in order to determine vulnerability
+can certainly provide the analysis primitives vulnerability researchers
+require to explore code bases, to determine vulnerability
 patterns, formulate these patterns in concise and expressive
-languages, and persist them, such that code can be automatically
+language, and persist them, such that code can be automatically
 scanned for these patterns in the future. Instead of only showcasing
 the tooling's default capabilities, in this tutorial we also
 demonstrate the many ways in which the tooling can be adapted and
@@ -48,7 +46,7 @@ The install script will:
 * unpack the ShiftLeft static policy to `~/.shiftleft/policy/static` and offer to delete it, if it already exists.
 * not touch anything outside these directories (installation and policy)
 
-### Additional Configuration for Large Projects
+### Additional Configuration for Large Projects (optional)
 
 Code analysis can require lots of memory, and unfortunately, the Java Virtual Machine (JVM) does not pick up the available amount of memory by itself. While tuning Java memory usage is a discipline in its own right, it is usually sufficient to specify the maximum available amount of heap memory via the Java virtual machine's `-Xmx` flag. The easiest way to achieve this globally is by setting the environment variable `_JAVA_OPTS` as follows:
 
