@@ -228,9 +228,9 @@ WHEN CONCLUSION attacker-to-deserializer => EMIT {
 
 The policy language additionally allows data transformations and checks to be specified in order to report flows of data, only if data does not undergo validation. For a detailed description of the query language, please see [Policy language](policy.md).
 
-# Extending the DSL via the "Pimp my library" pattern
+# Extending the DSL via the "Enrich my library" pattern
 
-The domain specific language can be enhanced by the user via the "Pimp my library pattern". For example, in the following script, a method named `whatICareAbout` is added to findings, which can subsequently be evaluated on findings just like built in language elements:
+The domain specific language can be enhanced by the user via the "Enrich my library pattern". For example, in the following script, a method named `whatICareAbout` is added to findings, which can subsequently be evaluated on findings just like built in language elements:
 
 ```scala
 import io.shiftleft.passes.findings.steps.Finding

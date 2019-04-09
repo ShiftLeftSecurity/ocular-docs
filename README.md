@@ -29,7 +29,7 @@ Ocular provides the following core features.
 * **Custom analysis scripts and extensibility.** User-provided REPL scripts can
   be executed non-interactively to perform automated custom scans for security
   issues. Moreover, the Ocular users can even augment and customize the query
-  language via the "pimp-my-library" pattern (included in trial).
+  language via the "enrich-my-library" pattern (included in trial).
 
 * **Framework and library support via policies.** ShiftLeft Code Analysis Tools
   comes with annotations for common Java frameworks and libraries. Possibly
